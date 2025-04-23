@@ -4,7 +4,7 @@ import img2 from "../assets/allinone.png"; // Importing the image
 
 function Project1() {
   return (
-    <div className=" bg-zinc-800 w-full pt-10">
+    <div className=" bg-zinc-800 mt-32 w-full">
       <div className="w-full pb-8 pt-24 text-5xl text-white shadow-2xl shadow-zinc-900 font-bold text-center">
         || Projects ||
       </div>

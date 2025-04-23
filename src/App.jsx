@@ -8,7 +8,7 @@ import Project3 from './Project/Project3'
 
 function App() {
   return (
-    <div className='bg-zinc-800 h-screen'>
+    <div className='bg-zinc-800'>
       <Navbar />
       <Home />
       <Project1 />
