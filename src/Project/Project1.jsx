@@ -1,108 +1,54 @@
 import React from "react";
-import img from "../assets/agrivision.png"; // Importing the image
-import img2 from "../assets/allinone.png"; // Importing the image
+import { motion } from "framer-motion";
 
-function Project1() {
+function Project1({ key, data }) {
   return (
-    <div className=" bg-zinc-800 mt-32 w-full">
-      <div className="w-full pb-8 pt-24 text-5xl text-white shadow-2xl shadow-zinc-900 font-bold text-center">
-        || Projects ||
+    <motion.div
+      className="bg-zinc-800 flex flex-wrap"
+      initial={{ opacity: 0, y: 100 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 1, ease: "easeOut" }}
+    >
+      {/* Timeline Circle Section */}
+      <div className="w-1/3">
+        <div className="w-[.1vw] ml-[17vw] h-1/3 bg-zinc-600"></div>
+        <div className="w-[4vw] ml-[15vw] h-[4vw] rounded-full border-2 border-dashed border-zinc-600 text-zinc-400 text-center text-2xl pt-[1vw]">
+          {data.id}
+        </div>
+        <div className="w-[.1vw] ml-[17vw] h-2/3 bg-zinc-600"></div>
       </div>
 
-      <div className="w-full pt-10 flex pl-10">
-        <div className="w-[49%] pt-10">
-          <img src={img} className="" />
-        </div>
-        <div className="w-[50%] mt-10 text-white mx-auto">
-          <h1 className="text-6xl font-bold text-center mb-8">AgriVision</h1>
-          <p className="m-10 text-xl text-justify leading-relaxed">
-            Welcome to AgriVision, a cutting-edge platform designed to empower
-            farmers with innovative tools to protect and enhance their crops.
-            AgriVision is more than just a tool—it's a mission to revolutionize
-            agriculture by combining technology and sustainability. By equipping
-            farmers with actionable insights, we aim to reduce crop loss,
-            optimize resource usage, and pave the way for a prosperous farming
-            community.
+      {/* Content Section */}
+      <div className="w-2/3">
+        <h1 className="text-3xl font-bold ml-[24vw] mb-8 m-10 text-white">
+          {data.title}
+        </h1>
+        <div>
+          <div className="w-[65%] ml-40">
+            <img src={data.image} className="rounded-md shadow-lg" />
+          </div>
+          <p className="m-10 text-xl ml-[8vw] w-2/3 text-white text-justify leading-relaxed">
+            {data.description}
           </p>
-
-          <div className="flex flex-wrap justify-center gap-4 mb-10">
-            <span className="px-4 py-2 text-sm font-semibold text-white bg-blue-500 rounded-full">
-              JavaScript ES6
-            </span>
-            <span className="px-4 py-2 text-sm font-semibold text-white bg-green-900 rounded-full">
-              React v18.0
-            </span>
-            <span className="px-4 py-2 text-sm font-semibold text-white bg-red-500 rounded-full">
-              Tailwind CSS v3.0
-            </span>
-            <span className="px-4 py-2 text-sm font-semibold text-white bg-purple-500 rounded-full">
-              Spring Boot 3.4.1
-            </span>
-            <span className="px-4 py-2 text-sm font-semibold text-white bg-yellow-500 rounded-full">
-              HTML 5
+          <div className="flex flex-wrap ml-40 gap-4 mb-6">
+            <span className="px-5 py-3 text-sm font-semibold text-white bg-zinc-600 rounded-xl">
+              {data.technologies}
             </span>
           </div>
-
-          <div className="flex justify-center">
-            <a href="https://github.com/siddharthk004/Html-Domination_Projects/tree/main/React/AgriVision" className="px-8 py-3 bg-gradient-to-r from-zinc-600 via-blue-700 to-purple-600 text-white font-bold rounded-lg shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105">
+          <div className="flex ml-40 mb-10">
+            <a
+              href={data.githubLink}
+              className="px-8 py-3 bg-gradient-to-r from-teal-600 via-blue-700 to-purple-600 text-white font-bold rounded-lg shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               GitHub
             </a>
           </div>
         </div>
       </div>
-
-      <br />
-
-      <div className="w-full pt-10 flex pl-10 pb-10">
-        <div className="w-[50%] mt-10 text-white mx-auto">
-          <h1 className="text-5xl font-bold text-center mb-8">
-            All In One Shop
-          </h1>
-          <p className="m-10 text-xl text-justify leading-relaxed">
-            Welcome to All-in-One Shop, your ultimate destination for the latest
-            and greatest in electronic gadgets! We are dedicated to bringing you
-            cutting-edge technology and innovative devices that simplify your
-            life and enhance your everyday experiences. At All-in-One Shop, we
-            pride ourselves on offering a wide range of high-quality products,
-            including:.
-            <br />
-            1 - Smartphones: From flagship models to budget-friendly options.
-            <br />
-            2 - Wearable Tech: Smartwatches and fitness trackers to keep you
-            connected and healthy.
-            <br />
-            3 - Audio Devices: Headphones and sound systems that redefine your
-            listening experience.
-            <br />4 - Home Appliances: Smart gadgets to make your home more
-            efficient and connected.
-          </p>
-
-          <div className="flex flex-wrap justify-center gap-4 mb-10">
-            <span className="px-4 py-2 text-sm font-semibold text-white bg-blue-500 rounded-full">
-              JavaScript ES6
-            </span>
-            <span className="px-4 py-2 text-sm font-semibold text-white bg-green-900 rounded-full">
-              React v18.0
-            </span>
-            <span className="px-4 py-2 text-sm font-semibold text-white bg-red-500 rounded-full">
-              Tailwind CSS v3.0
-            </span>
-            <span className="px-4 py-2 text-sm font-semibold text-white bg-yellow-500 rounded-full">
-              HTML 5
-            </span>
-          </div>
-
-          <div className="flex justify-center">
-            <a href="https://github.com/siddharthk004/Html-Domination_Projects/tree/main/React/All_In_One_Shop" className="px-8 py-3 bg-gradient-to-r from-zinc-600 via-blue-700 to-purple-600 text-white font-bold rounded-lg shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105">
-              GitHub
-            </a>
-          </div>
-        </div>
-        <div className="w-[50%] pr-10 pt-20 pb-6">
-          <img src={img2} className="" />
-        </div>
-      </div>
-    </div>
+    </motion.div>
   );
 }
 

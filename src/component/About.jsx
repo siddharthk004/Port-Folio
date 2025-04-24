@@ -41,7 +41,7 @@ const About = () => {
           </a>
         </div>
         <p className="text-gray-600 mt-6 text-sm">
-          © {new Date().getFullYear()} Your Name. All rights reserved.
+          © {new Date().getFullYear()} Pray-Tech : . All rights reserved.
         </p>
       </div>
     </footer>

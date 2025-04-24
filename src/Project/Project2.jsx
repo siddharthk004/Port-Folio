@@ -1,7 +1,4 @@
 import React from "react";
-import img from "../assets/cliser.jpg"; // Importing the image
-import img2 from "../assets/cvfs.png"; // Importing the image
-import img3 from "../assets/netflix.png"; // Importing the image
 
 function Project2() {
   return (
@@ -12,16 +9,10 @@ function Project2() {
         </div>
         <div className="w-[50%] mr-10 mt-24 text-white mx-auto">
           <h1 className="text-6xl font-bold text-center mb-12 mt-10">
-            Chat Application
+            
           </h1>
           <p className="m-10 text-xl text-justify leading-relaxed">
-            A Java client-server chat application is a program where multiple
-            clients communicate with a server over a network to exchange
-            messages. The server acts as the central hub, managing connections
-            and relaying messages between clients. This application typically
-            uses sockets for communication. The server listens for incoming
-            client connections on a specific port, while clients connect to the
-            server using its IP address and port.
+            
           </p>
 
           <div className="flex flex-wrap justify-center gap-4 mb-10">
@@ -37,7 +28,7 @@ function Project2() {
           </div>
 
           <div className="flex justify-center">
-            <a href="https://github.com/siddharthk004/Projects/blob/master/server.java" className="px-8 py-3 bg-gradient-to-r from-zinc-600 via-blue-700 to-purple-600 text-white font-bold rounded-lg shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105">
+            <a href="" className="px-8 py-3 bg-gradient-to-r from-zinc-600 via-blue-700 to-purple-600 text-white font-bold rounded-lg shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105">
               GitHub
             </a>
           </div>
@@ -50,26 +41,15 @@ function Project2() {
         <div className="w-[50%] mt-2 text-white mx-auto">
           <h1 className="text-5xl font-bold text-center mb-8">CVFS</h1>
           <p className="m-10 text-xl text-justify leading-relaxed">
-            A Customised Virtual File System (CVFS) in C or C++ is a
-            programmatic abstraction that simulates a file system's structure
-            and functionality within a controlled environment. It allows users
-            to create, read, write, delete, and manage files and directories in
-            a virtual space without using the underlying operating system's file
-            system directly. The CVFS typically implements features like inode
-            management, block allocation, and a directory hierarchy.
           </p>
 
           <div className="flex flex-wrap justify-center gap-4 mb-10">
             <span className="px-4 py-2 text-sm font-semibold text-white bg-blue-500 rounded-full">
-              C v17.0
-            </span>
-            <span className="px-4 py-2 text-sm font-semibold text-white bg-yellow-500 rounded-full">
-              C++ v17.0
             </span>
           </div>
 
           <div className="flex justify-center">
-            <a href="https://github.com/siddharthk004/Projects/blob/master/CVFS.Cpp" className="px-8 py-3 bg-gradient-to-r from-zinc-600 via-blue-700 to-purple-600 text-white font-bold rounded-lg shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105">
+            <a href="" className="px-8 py-3 bg-gradient-to-r from-zinc-600 via-blue-700 to-purple-600 text-white font-bold rounded-lg shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105">
               GitHub
             </a>
           </div>
@@ -88,13 +68,7 @@ function Project2() {
             Netflix Clone
           </h1>
           <p className="m-10 text-xl text-justify leading-relaxed">
-            A Netflix clone using HTML, CSS, and JavaScript is a front-end web
-            application that replicates the look and feel of Netflix's user
-            interface. It includes a responsive layout with sections like a
-            navigation bar, a hero banner, and categorized rows of movies or
-            shows displayed as carousels. HTML structures the content, CSS
-            styles the UI with animations and transitions, and JavaScript adds
-            interactivity,
+            
           </p>
 
           <div className="flex flex-wrap justify-center gap-4 mb-8">
