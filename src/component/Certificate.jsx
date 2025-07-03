@@ -11,22 +11,29 @@ const images = [img1, img3, img4, img5, img6, img7];
 
 function Certificate() {
   return (
-    <div className="bg-zinc-800 mt-40 pb-20">
-      <h1 className="text-4xl text-center text-white font-semibold">Certificate</h1>
-      <div className="flex flex-wrap gap-10 justify-center mt-10">
+    <section className="bg-zinc-900 py-20 mt-20 px-6">
+      <h2 className="text-4xl md:text-5xl font-bold text-center text-white mb-12">
+        Certificates
+      </h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
         {images.map((img, i) => (
-          <motion.img
+          <motion.div
             key={i}
-            src={img}
-            className="h-[20vw] w-[35vw] rounded-lg shadow-lg"
-            initial={{ opacity: 0, x: i % 2 === 0 ? -100 : 100 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 1.0, ease: "easeOut" }}
-          />
+            className="rounded-xl overflow-hidden shadow-lg border border-zinc-700 hover:shadow-yellow-400 transition duration-300"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.8, delay: i * 0.1 }}
+          >
+            <img
+              src={img}
+              alt={`Certificate ${i + 1}`}
+              className="w-full h-auto object-cover"
+            />
+          </motion.div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }
 

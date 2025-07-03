@@ -1,47 +1,57 @@
 import React from "react";
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { SiLeetcode } from "react-icons/si";
 
 const About = () => {
   return (
-    <footer className="bg-zinc-900 pt-20 text-white py-8">
-      <div className="container mx-auto text-center">
-        <h2 className="text-xl font-semibold mb-4">About Me</h2>
-        <p className="text-gray-400 mb-4">
-          I'm a passionate developer skilled in building user-friendly and innovative web solutions. 
-          I specialize in technologies like React, Java, Python, and more. Let's connect and create something amazing together!
+    <footer className="bg-zinc-900 pt-20 pb-10 text-white">
+      <div className="container mx-auto px-6 text-center max-w-4xl">
+        <h2 className="text-2xl font-semibold mb-4 tracking-wide">About Me</h2>
+        <p className="text-gray-400 leading-relaxed mb-6">
+          I'm a passionate full-stack developer dedicated to crafting clean,
+          user-focused applications. I specialize in Java, Spring Boot, React,
+          Python, and modern web technologies. Always learning, always building.
         </p>
-        <div className="flex justify-center gap-4">
-        <a
+
+        <div className="flex justify-center gap-6 text-xl mb-6">
+          <a
             href="https://www.linkedin.com/in/siddharth-kardile-3a2978267/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-500 hover:text-blue-300"
+            className="hover:text-blue-400 transition"
+            title="LinkedIn"
           >
-            LinkedIn
-          </a><a
+            <FaLinkedin />
+          </a>
+          <a
             href="https://leetcode.com/u/siddharthk004/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-yellow-500 hover:text-blue-300"
+            className="hover:text-yellow-400 transition"
+            title="LeetCode"
           >
-            Leetcode
+            <SiLeetcode />
           </a>
           <a
             href="https://github.com/siddharthk004"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-400 hover:text-gray-200"
+            className="hover:text-gray-300 transition"
+            title="GitHub"
           >
-            GitHub
+            <FaGithub />
           </a>
           <a
             href="mailto:siddharthkardile5@gmail.com"
-            className="text-red-500 hover:text-red-300"
+            className="hover:text-red-400 transition"
+            title="Email"
           >
-            Email Me
+            <FaEnvelope />
           </a>
         </div>
-        <p className="text-gray-600 mt-6 text-sm">
-          © {new Date().getFullYear()} Pray-Tech : . All rights reserved.
+
+        <p className="text-sm text-zinc-500">
+          &copy; {new Date().getFullYear()} <span className="text-yellow-400 font-medium">Pray-Tech</span>. All rights reserved.
         </p>
       </div>
     </footer>

@@ -1,53 +1,35 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-function Project1({ key, data }) {
+function Project1({ data }) {
   return (
     <motion.div
-      className="bg-zinc-800 flex flex-wrap"
-      initial={{ opacity: 0, y: 100 }}
+      className="bg-zinc-900 rounded-xl shadow-lg overflow-hidden p-6 flex flex-col justify-between transition-transform hover:scale-105 duration-300"
+      initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
-      transition={{ duration: 1, ease: "easeOut" }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
     >
-      {/* Timeline Circle Section */}
-      <div className="w-1/3">
-        <div className="w-[.1vw] ml-[17vw] h-1/3 bg-zinc-600"></div>
-        <div className="w-[4vw] ml-[15vw] h-[4vw] rounded-full border-2 border-dashed border-zinc-600 text-zinc-400 text-center text-2xl pt-[1vw]">
-          {data.id}
-        </div>
-        <div className="w-[.1vw] ml-[17vw] h-2/3 bg-zinc-600"></div>
-      </div>
-
-      {/* Content Section */}
-      <div className="w-2/3">
-        <h1 className="text-3xl font-bold ml-[24vw] mb-8 m-10 text-white">
-          {data.title}
-        </h1>
-        <div>
-          <div className="w-[65%] ml-40">
-            <img src={data.image} className="rounded-md shadow-lg" />
-          </div>
-          <p className="m-10 text-xl ml-[8vw] w-2/3 text-white text-justify leading-relaxed">
-            {data.description}
-          </p>
-          <div className="flex flex-wrap ml-40 gap-4 mb-6">
-            <span className="px-5 py-3 text-sm font-semibold text-white bg-zinc-600 rounded-xl">
-              {data.technologies}
-            </span>
-          </div>
-          <div className="flex ml-40 mb-10">
-            <a
-              href={data.githubLink}
-              className="px-8 py-3 bg-gradient-to-r from-teal-600 via-blue-700 to-purple-600 text-white font-bold rounded-lg shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              GitHub
-            </a>
-          </div>
-        </div>
-      </div>
+      <h1 className="text-2xl font-bold text-yellow-400 mb-4">{data.title}</h1>
+      <img
+        src={data.image}
+        alt={data.title}
+        className="rounded-md mb-4 shadow-md h-[200px] w-full object-cover"
+      />
+      <p className="text-sm text-white mb-4 text-justify leading-relaxed">
+        {data.description.length > 300
+          ? data.description.slice(0, 300) + "..."
+          : data.description}
+      </p>
+      <p className="text-xs text-gray-300 mb-4">{data.technologies}</p>
+      <a
+        href={data.githubLink}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold px-4 py-2 rounded-md text-center"
+      >
+        View on GitHub
+      </a>
     </motion.div>
   );
 }
