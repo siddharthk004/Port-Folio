@@ -11,7 +11,7 @@ const images = [img1, img3, img4, img5, img6, img7];
 
 function Certificate() {
   return (
-    <section className="bg-zinc-900 py-20 mt-20 px-6">
+    <section id="certification" className="bg-zinc-900 py-20 mt-20 px-6">
       <h2 className="text-4xl md:text-5xl font-bold text-center text-white mb-12">
         Certificates
       </h2>

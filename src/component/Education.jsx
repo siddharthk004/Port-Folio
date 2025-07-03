@@ -5,7 +5,7 @@ import img2 from "../assets/logo2.jpg";
 
 function Education() {
   return (
-    <section className="bg-zinc-900 py-20 px-6">
+    <section id="education" className="bg-zinc-900 py-20 px-6">
       <h2 className="text-4xl md:text-5xl font-bold text-center text-white mb-16">
         Education
       </h2>

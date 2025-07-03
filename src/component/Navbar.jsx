@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMdClose } from "react-icons/io";
+import { Link } from "react-scroll";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <div className="fixed animate-[swipeInTop_1.4s_ease-out] flex justify-between items-center text-white px-[4vw] py-3 h-[8vh] w-full bg-black">
+    <div id="home" className="fixed animate-[swipeInTop_1.4s_ease-out] flex justify-between items-center text-white px-[4vw] py-3 h-[8vh] w-full bg-black">
       {/* Logo & Title */}
       <div className="flex items-center">
         <img
@@ -21,11 +22,60 @@ function Navbar() {
 
       {/* Desktop Menu */}
       <div className="hidden md:flex gap-6 text-[1.2vw] font-semibold">
-        <button className="hover:text-yellow-400">Home</button>
-        <button className="hover:text-yellow-400">Portfolio</button>
-        <button className="hover:text-yellow-400">Testimonials</button>
-        <button className="hover:text-yellow-400">Services</button>
-        <button className="hover:text-yellow-400">Contact</button>
+        <Link
+          to="home"
+          smooth={true}
+          duration={600}
+          offset={-60} // optional: to account for fixed navbar height
+          className="cursor-pointer hover:text-yellow-400"
+        >
+          Home
+        </Link>
+        <Link
+          to="project"
+          smooth={true}
+          duration={600}
+          offset={-60} // optional: to account for fixed navbar height
+          className="cursor-pointer hover:text-yellow-400"
+        >
+          Project
+        </Link>
+        <Link
+          to="services"
+          smooth={true}
+          duration={600}
+          offset={-60} // optional: to account for fixed navbar height
+          className="cursor-pointer hover:text-yellow-400"
+        >
+          Services
+        </Link>
+        <Link
+          to="certification"
+          smooth={true}
+          duration={600}
+          offset={-60} // optional: to account for fixed navbar height
+          className="cursor-pointer hover:text-yellow-400"
+        >
+          Certification
+        </Link>
+        <Link
+          to="education"
+          smooth={true}
+          duration={600}
+          offset={-60} // optional: to account for fixed navbar height
+          className="cursor-pointer hover:text-yellow-400"
+        >
+          Education
+        </Link>
+        <Link
+          to="contact"
+          smooth={true}
+          duration={600}
+          offset={-60} // optional: to account for fixed navbar height
+          className="cursor-pointer hover:text-yellow-400"
+        >
+          Contact
+        </Link>
       </div>
 
       {/* Connect Button (Responsive) */}
@@ -42,7 +92,10 @@ function Navbar() {
 
       {/* Hamburger Icon for Mobile */}
       <div className="md:hidden z-50">
-        <button onClick={() => setMenuOpen(!menuOpen)} className="text-yellow-300 text-3xl">
+        <button
+          onClick={() => setMenuOpen(!menuOpen)}
+          className="text-yellow-300 text-3xl"
+        >
           {menuOpen ? <IoMdClose /> : <GiHamburgerMenu />}
         </button>
       </div>

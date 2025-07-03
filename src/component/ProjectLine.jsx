@@ -39,7 +39,7 @@ const ProjectLine = () => {
   ];
 
   return (
-    <div className="pt-[10vh] px-4 sm:px-8 lg:px-16">
+    <div id="project" className="pt-[10vh] px-4 sm:px-8 lg:px-16">
       <h1 className="mb-12 text-4xl text-yellow-300 font-bold text-center">
         || Projects ||
       </h1>
